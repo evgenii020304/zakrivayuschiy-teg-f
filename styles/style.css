@@ -326,11 +326,6 @@ dialog::backdrop {
   gap: 20px;
 }
 
-.dialog__disk {
-  width: 39px;
-  height: 39px;
-}
-
 .dialog__button {
   cursor: pointer;
   border: var( --border);
@@ -364,7 +359,9 @@ dialog::backdrop {
   }
 
   .button__save {
+    display: flex;
     flex-direction: column;
+    gap: 8px;
     height: auto;
     padding: 15px;
     width: 310px;
@@ -372,11 +369,6 @@ dialog::backdrop {
 
   dialog {
     max-width: 341px;
-  }
-
-  .button__save {
-    display: flex;
-    gap: 8px;
   }
 
   .disk {
