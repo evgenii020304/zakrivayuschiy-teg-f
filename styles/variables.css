@@ -1,0 +1,22 @@
+:root {
+  --font-main: 'Inter-Variable';
+  --font-accent: 'PressStart2P';
+  --font-weight: 400;
+  --font-weight-text: 410;
+  --font-weight-titles: 715;
+  --font-size: 18px;
+  --font-size-button: 14px;
+  --font-size-title: clamp(3.063rem, 2.71rem + 1.502vw, 4.063rem);
+  --font-size-subtitle: clamp(0.875rem, 0.677rem + 0.845vw, 1.438rem);
+  --text-color: #000000;
+  --bg-color: #fff;
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, #d3d3d3 0, #d3d3d3 2px, transparent 2px, transparent 4px),
+  repeating-linear-gradient(to bottom, #e7e7e7 0%, #e7e7e7 0.01%, #1a1a1a 100%);
+  --border: 2px solid #000;
+  --content-width: clamp(375px, 704px, 100vw);
+  /*For animation*/
+  --edge: #000;
+  --animation-color: rgb(255, 0, 0);
+  --edge-color: #FF0000;
+}
