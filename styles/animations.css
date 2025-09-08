@@ -1,3 +1,4 @@
+/* Анимации */
 @keyframes scale-up {
   0% {
     transform: scale(1);
@@ -30,18 +31,23 @@
   }
 }
 
-.edge {
-  transition: color 0.1s linear;
+.like-icon .core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s linear;
 }
 
-.core {
-  transition: opacity 0.3s linear;
-  opacity: 1;
+.like-icon .main-body {
+  fill: transparent;
+  transition: fill 0.3s linear;
 }
 
-.main-body {
-  transition: opacity 0.3s linear;
-  opacity: 1;
+.like-icon .contour {
+  fill: var(--edge);
+  transition: fill 0.1s linear;
+}
+
+.like-icon .sparks {
+  opacity: 0;
 }
 
 /*Hover*/
@@ -52,7 +58,7 @@
 
 .like-icon:hover .main-body {
   fill: var(--edge);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 /*Active*/
@@ -63,15 +69,10 @@
 
 .like-icon:active .main-body {
   fill: var(--animation-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.05s linear;
 }
 
 /*Is-liked*/
-.like-icon.is-liked .edge {
-  fill: var(--edge-color);
-  transition: fill 0.3s linear;
-}
-
 .like-icon.is-liked .core {
   fill: var(--animation-color);
   transition: fill 0.3s linear;
@@ -79,36 +80,22 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-color);
-  transition: fill 0.3s linear;
+  transition: fill 0.3s 0.05s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-color);
+  transition: fill 0.3s 0.06s linear;
 }
 
 .like-icon.is-liked {
-  transform: scale(1.1);
-  animation: scale-up 0.3s ease-in-out forwards;
+  animation: scale-up 0.3s 0.1s ease-in;
+}
+
+.like-icon.is-liked .sparks {
+  animation: sparks-fade 0.3s 0.3s ease-in;
 }
 
 .like-icon {
   transform-origin: center;
-  transition: transform 0.25s ease-out;
-}
-
-.like-icon.is-liked .sparks {
-  opacity: 1;
-  animation: sparks-fade 0.3s ease-in 0.3s forwards;
-}
-
-.like-icon.is-liked:not(:hover):not(:active) .sparks {
-  animation: sparks-disappear 0.3s ease-in 0s 1 forwards;
-}
-
-.card__icon-button:not(.is-liked) .heart .sparks {
-  opacity: 0;
-  transform: scale(0.2);
-  transition: opacity 0.3s linear, transform 0.3s linear;
-  transform-origin: center center;
-}
-
-.card__icon-button:not(.is-liked) .heart .sparks.active {
-  opacity: 1;
-  transform: scale(1);
 }
