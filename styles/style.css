@@ -137,9 +137,9 @@
   display: flex;
   flex-direction: column;
   padding-block-start: 25px;
-  padding-block-end: 21px;
+  padding-block-end: 24px;
   padding-inline: 25px;
-  gap: 23px;
+  gap: 25px;
 }
 
 /* Фильтры для изображений */
